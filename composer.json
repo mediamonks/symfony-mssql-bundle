@@ -1,0 +1,57 @@
+{
+  "name": "mediamonks/mssql-bundle",
+  "type": "symfony-bundle",
+  "description": "MediaMonks Mssql Bundle for pdo_dblib, dblib and sqlsrv with utf8 and transaction support",
+  "keywords": [
+    "mssql",
+    "dblib",
+    "sqlsrv",
+    "symfony",
+    "bundle",
+    "freetds",
+    "pdo_dblib",
+    "pdo_sqlsrv",
+    "sqlserver",
+    "utf8",
+    "utf-8",
+    "unicode"
+  ],
+  "homepage": "https://www.mediamonks.com/",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Robert Slootjes",
+      "email": "robert@mediamonks.com"
+    },
+    {
+      "name": "Arjen Warendorff",
+      "email": "arjen@mediamonks.com"
+    },
+    {
+      "name": "Michal Kristin",
+      "email": "michal@mediamonks.com"
+    },
+    {
+      "name": "Realestate.co.nz",
+      "homepage": "http://www.realestate.co.nz"
+    },
+    {
+      "name": "Ken Golovin",
+      "homepage": "https://github.com/pasinter"
+    }
+  ],
+  "require": {
+    "php": "^5.4|~7.0",
+    "symfony/framework-bundle": "^2.7|^3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "MediaMonks\\MssqlBundle\\": ""
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  }
+}

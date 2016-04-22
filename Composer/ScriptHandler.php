@@ -2,7 +2,7 @@
 
 namespace MediaMonks\MssqlBundle\Composer;
 
-use Composer\Script\CommandEvent;
+use Composer\Script\Event;
 use Symfony\Component\Finder\Finder;
 
 /**
@@ -10,14 +10,16 @@ use Symfony\Component\Finder\Finder;
  */
 class ScriptHandler
 {
+    const DOCTRINE_ORM_PACKAGE_PATH = '/doctrine/orm/lib/';
+
     /**
-     * @param CommandEvent $event
+     * @param Event $event
      */
-    public static function ensureDoctrineORMOverrides(CommandEvent $event)
+    public static function ensureDoctrineORMOverrides(Event $event)
     {
-        $doctrineOrmPath = self::getDoctrineOrmPath();
-        if(!file_exists($doctrineOrmPath)) {
-            return;
+        $doctrineOrmPath = self::getDoctrineOrmPath($event);
+        if (!file_exists($doctrineOrmPath)) {
+            return; // Doctrine ORM does not seem be installed
         }
 
         $finder = new Finder();
@@ -55,14 +57,11 @@ class ScriptHandler
     }
 
     /**
+     * @param Event $event
      * @return string
      */
-    public static function getDoctrineOrmPath()
+    public static function getDoctrineOrmPath(Event $event)
     {
-        $currentDirectory = __DIR__;
-        if(strpos($currentDirectory, 'vendor/mediamonks') === false) {
-            return $currentDirectory . '/../../../../vendor/doctrine/orm/lib/'; // for local development
-        }
-        return $currentDirectory . '/../../../doctrine/orm/lib/'; // when installed as a package
+        return $event->getComposer()->getConfig()->get('vendor-dir') . self::DOCTRINE_ORM_PACKAGE_PATH;
     }
 }

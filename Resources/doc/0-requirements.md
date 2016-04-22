@@ -6,13 +6,18 @@ FreeTDS is a set of libraries for Unix and Linux that allows your programs to na
 
 This bundle needs the `FreeTDS`_ and `pdo_dblib`_ driver to be installed on your system.
 
-Make sure your freetds config (usually located in /etc/freetds/freetds.conf) contains this block:
+## Installation
 
-## Install dblib & FreeTDS on OS X
+### Ubuntu/Debian Linux
+
+1. sudo apt-get -y install php56-odbc tdsodbc
+
+*Any version of PHP installed with Homebrew should work. Just change `php56` in the command to your version.*
+
+### OS X
 
 The simplest way to install dblib on OS X is by using [Homebrew](http://brew.sh/). This guide will therefore assume that you have [Homebew installed](http://brew.sh/), are using PHP [installed with Homebrew](https://github.com/Homebrew/homebrew-php#installation) and using the native Apache server in OS X.
 
-### Install
 
 1. `brew update`
 2. `brew install php56-pdo-dblib` The installation can take some time, be patient!
@@ -20,11 +25,11 @@ The simplest way to install dblib on OS X is by using [Homebrew](http://brew.sh/
 
 *Any version of PHP installed with Homebrew should work. Just change `php56` in the command to your version.*
 
-### Update the FreeTDS config
+## Config
 
-To finish up we also need to do some light modifications to the FreeTDS configuration.
+To finish up we also need to do some modifications to the FreeTDS configuration.
 
-You should find the config file in `/usr/local/etc/freetds.conf`. Open it with your favorit text editor.
+You can probably find the config file in `/usr/freetds/freetds.conf` or `/usr/local/etc/freetds.conf`. Open it with your favorite text editor.
 
 In the `[global]` section, find a line that looks like
 

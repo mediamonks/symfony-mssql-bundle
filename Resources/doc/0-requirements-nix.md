@@ -4,7 +4,7 @@
 
 FreeTDS is a set of libraries for Unix and Linux that allows your programs to natively talk to Microsoft SQL Server and Sybase databases.
 
-This bundle needs the `FreeTDS`_ and `pdo_dblib`_ driver to be installed on your system.
+This bundle needs the `FreeTDS` and `pdo_dblib` driver to be installed on your system.
 
 ## Installation
 

@@ -14,7 +14,7 @@ This bundle needs the `FreeTDS` and `pdo_dblib` driver to be installed on your s
 
 ### OS X
 
-The simplest way to install dblib on OS X is by using [Homebrew](http://brew.sh/). This guide will therefore assume that you have [Homebew installed](http://brew.sh/), are using PHP [installed with Homebrew](https://github.com/Homebrew/homebrew-php#installation) and using the native Apache server in OS X.
+The simplest way to install dblib on OS X is by using [Homebrew](http://brew.sh/). This guide will therefore assume that you have [Homebew](http://brew.sh/) installed, are using PHP [installed with Homebrew](https://github.com/Homebrew/homebrew-php#installation) and using the native Apache server in OS X.
 
 1. `brew update`
 2. `brew install php56-pdo-dblib` The installation can take some time, be patient!

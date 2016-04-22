@@ -19,15 +19,13 @@ There are a few bundles and packages out there which can handle dblib but unfort
 
 # A Big Thanks
 
-- [Realestate.co.nz](http://www.realestate.co.nz/) for their awesome [MssqlBundle](https://github.com/realestateconz/MssqlBundle/) under the MIT licence, the base for this bundle
+- [Realestate.co.nz](http://www.realestate.co.nz/) for their awesome [MssqlBundle](https://github.com/realestateconz/MssqlBundle/), the base for this bundle
 - [Leaseweb](https://www.leaseweb.com/) for their [PdoDblib package](https://github.com/LeaseWeb/LswDoctrinePdoDblib), it was very useful too
 - Michal for his hard work in the past on projects where dblib had to be used, your input for this bundle was of much valuable
 - Arjen for his dedicated work on the function that prepares the query for supporting UTF-8 ♥
 - Tonny & Elmar from the .NET team for their help on working with Microsoft SQL Server
 
 # Notes
-
-Some things which are good to know:
 
 - Do not use pdo_dblib unless you have very good reasons, use a different driver if you get the chance
 - You probably need to be change the FreeTDS conf (usually in /etc/freetds/freetds.conf), make sure you can
@@ -37,6 +35,7 @@ Some things which are good to know:
 - This bundle was only tested on SQL Server 2008 R2 SP2
 - Joined inheritance mapping in ORM is not supported yet since we did not need it, this might be supported in the future
 - Symfony session handler does not use locking now, this might be supported in the future
+- There are no tests since original tests on Doctrine are also likely to fail, take this bundle as-is but please create a PR if you have found an issue and fixed it
 
 # Documentation
 

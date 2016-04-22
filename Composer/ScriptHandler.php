@@ -59,9 +59,10 @@ class ScriptHandler
      */
     public static function getDoctrineOrmPath()
     {
-        if(strpos(__DIR__, 'vendor/mediamonks') === false) {
-            return __DIR__ . '/../../../../vendor/doctrine/orm/lib/'; // for local development
+        $currentDirectory = __DIR__;
+        if(strpos($currentDirectory, 'vendor/mediamonks') === false) {
+            return $currentDirectory . '/../../../../vendor/doctrine/orm/lib/'; // for local development
         }
-        return __DIR__ . '/../../../doctrine/orm/lib/'; // when installed as a package
+        return $currentDirectory . '/../../../doctrine/orm/lib/'; // when installed as a package
     }
 }

@@ -1,7 +1,7 @@
 [![Total Downloads](https://poser.pugx.org/mediamonks/mssql-bundle/downloads)](https://packagist.org/packages/mediamonks/mssql-bundle)
 [![Latest Stable Version](https://poser.pugx.org/mediamonks/mssql-bundle/v/stable)](https://packagist.org/packages/mediamonks/mssql-bundle)
 [![Latest Unstable Version](https://poser.pugx.org/mediamonks/mssql-bundle/v/unstable)](https://packagist.org/packages/mediamonks/mssql-bundle)
-[![SensioLabs Insight](https://img.shields.io/sensiolabs/i/c42e43fd-9c7b-47e1-8264-3a98961e9236.svg)](https://insight.sensiolabs.com/projects/c42e43fd-9c7b-47e1-8264-3a98961e9236)
+[![SensioLabs Insight](https://img.shields.io/sensiolabs/i/dae91dea-607a-4b55-9c10-593f5908fc5f.svg)](https://insight.sensiolabs.com/projects/dae91dea-607a-4b55-9c10-593f5908fc5f)
 [![License](https://poser.pugx.org/mediamonks/mssql-bundle/license)](https://packagist.org/packages/mediamonks/mssql)
 
 # MediaMonksMssqlBundle

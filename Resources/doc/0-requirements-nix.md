@@ -1,4 +1,4 @@
-# Step 0: Requirements
+# Step 0: Requirements *nix
 
 ## FreeTDS
 
@@ -15,7 +15,6 @@ This bundle needs the `FreeTDS`_ and `pdo_dblib`_ driver to be installed on your
 ### OS X
 
 The simplest way to install dblib on OS X is by using [Homebrew](http://brew.sh/). This guide will therefore assume that you have [Homebew installed](http://brew.sh/), are using PHP [installed with Homebrew](https://github.com/Homebrew/homebrew-php#installation) and using the native Apache server in OS X.
-
 
 1. `brew update`
 2. `brew install php56-pdo-dblib` The installation can take some time, be patient!
@@ -51,3 +50,17 @@ client charset = UTF-8
 ```
 
 Save the changes and you are good to go.
+
+
+## Alternate Config
+
+When your FreeTDS config is used by multiple apps and you can not change the global settings you can create a separate group instead
+
+```
+[example]
+host = <host_or_ip_of_db_server>
+tds version = 8.0
+client charset = UTF-8
+```
+
+Then when you specifiy the host in your Symfony parameters.yml you will use "example" instead of the host/ip and this block with it's configuration will be used instead

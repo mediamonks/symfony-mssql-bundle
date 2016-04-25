@@ -33,7 +33,7 @@ in the ``app/AppKernel.php`` file of your project:
             $bundles = [
                 // ...
 
-                new MediaMonks\RestApiBundle\MediaMonksMssqlBundle(),
+                new MediaMonks\MssqlBundle\MediaMonksMssqlBundle(),
             ];
 
             // ...

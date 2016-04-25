@@ -69,3 +69,39 @@ Doctrine DBAL config in the ``app/config/config.yml`` so it looks like this:
 
 .. _`installation chapter`: https://getcomposer.org/doc/00-intro.md
 
+D) Configure Database Sessions (optional)
+
+Since the default PDO Session Handler provided by Symfony is not supported on ``pdo_dblib``
+a custom one is needed. Luckily the configuring it is very similar as configuring the default one.
+
+Open up ``app/services.yml`` and add these services:
+
+.. code-block:: yaml
+
+    services:
+        pdo:
+            class: MediaMonks\MssqlBundle\PDO\PDO
+            arguments:
+                host: "%database_host%"
+                port: "%database_port%"
+                dbname: "%database_name%"
+                user: "%database_user%"
+                password: "%database_password%"
+                options:
+            calls:
+                - [setAttribute, [3, 2]] # \PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION
+
+        session.handler.pdo:
+            class:     MediaMonks\MssqlBundle\Session\Storage\Handler\PdoSessionHandler
+            public:    false
+            arguments: ["@pdo"]
+
+Then open up ``app/config.yml`` and change the session handler id to the one we just created:
+
+.. code-block:: yaml
+
+    framework:
+        session:
+            handler_id: session.handler.pdo
+
+Now you should be good to go :)

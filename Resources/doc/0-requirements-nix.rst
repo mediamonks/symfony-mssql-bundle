@@ -33,8 +33,8 @@ have `Homebrew`_ installed, are using `PHP installed with Homebrew`_ and using t
 
     Any version of PHP installed should work. Just change ``php56`` in the command to match your version og PHP.
 
-FreeTDS Config
-``````````````
+FreeTDS Configuration
+`````````````````````
 
 To finish up we also need to do some modifications to the FreeTDS configuration.
 
@@ -65,8 +65,8 @@ Save the changes and you are good to go.
     Although you would expect this to be enough for UTF-8 to be supported it isn't,
     that's why you still need this bundle to make it work.
 
-Alternate Config
-''''''''''''''''
+Alternate Configuration
+'''''''''''''''''''''''
 
 When your FreeTDS config is used by multiple apps and you can not change the
 global settings you can create a separate group instead

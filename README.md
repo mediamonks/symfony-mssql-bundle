@@ -32,7 +32,7 @@ There are a few bundles and packages out there which can handle dblib but unfort
 - Support for ORM requires modifications to some Doctrine files in the vendor folder, a script for Composer which does this automatically is provided in this bundle
 - When doing manual queries you should always use executeQuery() and executeUpdate() on Doctrine DBAL
 - Named parameters are not supported, UTF-8 characters will be saved as ?
-- This bundle was only tested on SQL Server 2008 R2 SP2
+- This bundle was only tested on SQL Server 2008 R2 SP2 and nvarchar fields
 - Joined inheritance mapping in ORM is not supported yet since we did not need it, this might be supported in the future
 - Symfony session handler does not use locking now, this might be supported in the future
 - There are no tests since original tests on Doctrine are also likely to fail, take this bundle as-is but please create a PR if you have found an issue and fixed it

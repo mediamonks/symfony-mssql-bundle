@@ -9,6 +9,6 @@ class PlatformHelper
      */
     public static function isWindows()
     {
-        return stristr(PHP_OS, 'WIN');
+        return stristr(PHP_OS, 'WIN') && strtolower(PHP_OS) !== 'darwin';
     }
 }

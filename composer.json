@@ -1,7 +1,7 @@
 {
   "name": "mediamonks/mssql-bundle",
   "type": "symfony-bundle",
-  "description": "MediaMonks Mssql Bundle for pdo_dblib, dblib and sqlsrv with utf8 and transaction support",
+  "description": "Symfony Bundle for working with Microsoft SQL Server on *nix (dblib) and Windows (sqlsrv) with UTF-8 and transactions support",
   "keywords": [
     "mssql",
     "dblib",

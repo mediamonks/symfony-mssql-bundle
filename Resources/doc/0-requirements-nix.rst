@@ -17,7 +17,7 @@ Ubuntu/Debian Linux
 
 Simply install the correct packages:
 
-1. ``apt-get -y install php56-sybase php56-odbc tdsodbc``
+1. ``sudo apt-get -y install php56-sybase php56-odbc tdsodbc``
 
 OS X
 ''''
@@ -27,11 +27,12 @@ have `Homebrew`_ installed, are using `PHP installed with Homebrew`_ and using t
 
 1. ``brew update``
 2. ``brew install php56-pdo-dblib`` The installation can take some time, be patient!
-3. ``sudo apachectl restart``
 
 .. note::
 
     Any version of PHP installed should work. Just change ``php56`` in the command to match your version og PHP.
+
+Restart your webserver and verify with ``phpinfo();`` if ``pdo_dblib`` is properly installed.
 
 FreeTDS Configuration
 `````````````````````

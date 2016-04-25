@@ -19,8 +19,8 @@ There are a few bundles and packages out there which can handle dblib but unfort
 
 # A Big Thanks
 
-- [Realestate.co.nz](http://www.realestate.co.nz/) for their awesome [MssqlBundle](https://github.com/realestateconz/MssqlBundle/), the base for this bundle
-- [Leaseweb](https://www.leaseweb.com/) for their [PdoDblib package](https://github.com/LeaseWeb/LswDoctrinePdoDblib), it was very useful too
+- [Realestate.co.nz](http://www.realestate.co.nz/) for their awesome [MssqlBundle](https://github.com/realestateconz/MssqlBundle/) which was the base for this bundle
+- [Leaseweb](https://www.leaseweb.com/) for their [PdoDblib package](https://github.com/LeaseWeb/LswDoctrinePdoDblib) which was very useful too
 - Michal for his hard work in the past on projects where dblib had to be used, your input for this bundle very valuable
 - Arjen for his dedicated work on the function that prepares the query for supporting UTF-8 ♥
 - Tonny & Elmar from the .NET team for their help on working with Microsoft SQL Server
@@ -36,6 +36,7 @@ There are a few bundles and packages out there which can handle dblib but unfort
 - Joined inheritance mapping in ORM is not supported yet since we did not need it, this might be supported in the future
 - Symfony session handler does not use locking now, this might be supported in the future
 - There are no tests since original tests on Doctrine are also likely to fail, take this bundle as-is but please create a PR if you have found an issue and fixed it
+- MediaMonks is not responsible for any data loss, use dblib and this driver at your own risk
 
 # Documentation
 

@@ -69,10 +69,39 @@ Doctrine DBAL config in the ``app/config/config.yml`` so it looks like this:
 
 .. _`installation chapter`: https://getcomposer.org/doc/00-intro.md
 
-D) Configure Database Sessions (optional)
+D) Enable the Composer script
+-----------------------------
 
-Since the default PDO Session Handler provided by Symfony is not supported on ``pdo_dblib``
-a custom one is needed. Luckily the configuring it is very similar as configuring the default one.
+For persisting entities with Doctrine ORM it is needed to override some classes within the Doctrine
+ORM namespace. Unfortunately Doctrine uses a lot of private methods which keeps us from using OOP
+to solve this issue. To work around this the namespaces in a few files are modified so Doctrine loads
+our classes instead of theirs to make it work again.
+
+Open your ``composer.json`` file and make sure the script is added to ``post-install-cmd`` and
+``post-update-cmd``
+
+.. code-block:: json
+    "scripts": {
+        "post-install-cmd": [
+            "MediaMonks\\MssqlBundle\\Composer\\ScriptHandler::ensureDoctrineORMOverrides"
+        ],
+        "post-update-cmd": [
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap"
+        ]
+    }
+
+.. note::
+    Probably other scripts are already present, make sure this script is added first.
+
+.. caution::
+    This will modify files in your ``vendor`` folder, make sure this script is ran when doing automated deploys.
+
+
+E) Enable database sessions (optional)
+======================================
+
+Since the default PDO Session Handler provided by Symfony does not support ``pdo_dblib``
+a custom handler is needed. Luckily the configuring it is very similar as configuring the default one.
 
 Open up ``app/services.yml`` and add these services:
 
@@ -103,5 +132,3 @@ Then open up ``app/config.yml`` and change the session handler id to the one we 
     framework:
         session:
             handler_id: session.handler.pdo
-
-Now you should be good to go :)

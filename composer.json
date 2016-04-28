@@ -42,8 +42,10 @@
     }
   ],
   "require": {
-    "php": "^5.4|~7.0",
-    "symfony/framework-bundle": "^2.7|^3.0"
+    "php": "^5.4|~7.0"
+  },
+  "suggest": {
+    "symfony/framework-bundle": "For when using this in Symfony"
   },
   "autoload": {
     "psr-4": {

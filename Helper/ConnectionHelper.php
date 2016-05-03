@@ -18,7 +18,6 @@ class ConnectionHelper
         $connection->exec('SET ANSI_NULLS ON');
         $connection->exec('SET QUOTED_IDENTIFIER ON');
         $connection->exec('SET CONCAT_NULL_YIELDS_NULL ON');
-        $connection->exec('SET CONCAT_NULL_YIELDS_NULL ON');
     }
 
     /**

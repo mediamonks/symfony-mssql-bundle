@@ -21,7 +21,7 @@ There are a few bundles and packages out there which can handle dblib but unfort
 
 - [Realestate.co.nz](http://www.realestate.co.nz/) for their awesome [MssqlBundle](https://github.com/realestateconz/MssqlBundle/) which was the base for this bundle
 - [Leaseweb](https://www.leaseweb.com/) for their [PdoDblib package](https://github.com/LeaseWeb/LswDoctrinePdoDblib) which was very useful too
-- Michal for his hard work in the past on projects where dblib had to be used, your input for this bundle very valuable
+- Michal for his hard work in the past on projects where dblib had to be used, your input for this bundle was very valuable
 - Arjen for his dedicated work on the function that prepares the query for supporting UTF-8 ♥
 - Tonny & Elmar from the .NET team for their help on working with Microsoft SQL Server
 

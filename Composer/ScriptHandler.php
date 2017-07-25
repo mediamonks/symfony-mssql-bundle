@@ -39,10 +39,7 @@ class ScriptHandler
 
         $baseFind    = 'use Doctrine\ORM\Persisters\Entity\\';
         $baseReplace = 'use MediaMonks\MssqlBundle\Doctrine\ORM\Persisters\Entity\\';
-        $replaces    = [
-            'BasicEntityPersister',
-            'SingleTablePersister'
-        ];
+        $replaces    = ['BasicEntityPersister'];
 
         foreach ($finder as $file) {
             $data = file_get_contents($file->getRealpath());
